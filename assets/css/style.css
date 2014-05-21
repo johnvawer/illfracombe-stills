@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
 	border-top: none;
 	position: relative;
 	height: 100%;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .jumbotron-image{
@@ -51,12 +51,16 @@ h1, h2, h3, h4, h5 {
 	color: #fff;
 }
 
+.row-additional-padding{
+	padding: 0 50px;
+}
+
 .section-title{
 	font-size: 50pt;
 	font-size: 50pt;
 	margin-top: 5%;
 	margin-bottom: 5%;
-	padding-bottom: 3%;	
+	padding-bottom: 3%;
 }
 
 .cover-arrow{
@@ -120,7 +124,7 @@ h1, h2, h3, h4, h5 {
 .sidebar{
 	height: 100%;
 	left: 20px;
-	display: table !important;
+	display: table;
 	position: fixed;
 	z-index: 1;
 }
@@ -177,4 +181,3 @@ h1, h2, h3, h4, h5 {
 /***************************************/
 
 
-	
