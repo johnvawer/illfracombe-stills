@@ -1,0 +1,180 @@
+::selection{
+	background: orange;
+}
+
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Arial';
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Montserrat';
+}
+
+.container-full-height{
+	border-top: none;
+	position: relative;
+	height: 100%;
+	overflow: hidden;	
+}
+
+.jumbotron-image{
+	background-image: url(../img/IMG_7790.JPG);
+	background-size: cover;
+	background-position: center 100%;
+	z-index: 2;
+}
+
+.main-title{
+    font-size: 50pt;
+    text-transform: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: 1px;
+    border: none;
+    font-family: 'Montserrat';
+}
+
+.sub-title{
+	font-family: 'Merriweather Sans';
+	font-weight: 300;
+	opacity: 0.8;
+	color: #fff;
+}
+
+.section-title{
+	font-size: 50pt;
+	font-size: 50pt;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	padding-bottom: 3%;	
+}
+
+.cover-arrow{
+	border: 2px solid #fff;
+	height: 50px;
+	border-width: 0 3px 3px 0;
+	width: 50px;
+	-webkit-transform: rotate(45deg);
+	margin: auto;
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	margin-left: -25px;
+	text-align: center;
+	opacity: 0.7;
+	box-shadow: 1px 1px 1px #333;
+	-moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.cover-arrow:hover{
+	cursor: pointer;
+	opacity: 1;
+	-moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.padding-top-5{
+	padding: 3% 0;
+}
+
+.padding-top-10{
+	padding: 1% 0;
+}
+
+#gallery-container{
+	background-color: #ECE9E9;
+}
+
+#about-container {
+	background-color: #91BED4;
+	color: #446474;
+}
+
+#about-container .section-title{
+	border-bottom: 1px solid #446474;
+}
+
+#about-container p{
+	color: #4E7081;
+	font-size: 14pt;
+	font-family: 'Merriweather Sans';
+	font-weight: 300;
+}
+
+/***************************************/
+.sidebar{
+	height: 100%;
+	left: 20px;
+	display: table !important;
+	position: fixed;
+	z-index: 1;
+}
+
+.sidebar-nav{
+	width: auto;
+	height: auto;
+	padding: 5px;
+	border-radius: 5px;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+}
+
+.sidebar-breadcrumb{
+	padding: 6px 0;
+}
+
+.sidebar-breadcrumb :hover{
+	cursor: pointer;
+}
+
+/* Arrow classes to create diamonds */
+.arrow-up{
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+
+	border-bottom: 8px solid #446474;
+}
+
+.arrow-down{
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+
+	border-top: 8px solid #446474;
+}
+
+.arrow-right{
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+
+	border-left: 8px solid #d9534f;
+}
+
+.tooltip.left .tooltip-arrow{
+    border-left-color: #d9534f;
+}
+/***************************************/
+
+
+	
