@@ -180,4 +180,10 @@ h1, h2, h3, h4, h5 {
 }
 /***************************************/
 
+/* remove hove zoom on thumbnails */
+#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover{
+	-ms-transform: scale(1) !important;
+	-webkit-transform: scale(1) !important;
+	transform: scale(1) !important;
+}
 
