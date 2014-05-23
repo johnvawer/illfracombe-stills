@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5 {
 .container-full-height{
 	border-top: none;
 	position: relative;
-	height: 100%;
+	min-height: 100%;
 	overflow: hidden;
 }
 
@@ -90,6 +90,27 @@ h1, h2, h3, h4, h5 {
     -o-transition: 0.6s;
     -webkit-transition: 0.6s;
     transition: 0.6s;
+}
+
+.diamond-nav{
+	border: 2px solid #446474;
+	height: 16px;	
+	width: 16px;
+	background-color: transparent;
+	-webkit-transform: rotate(45deg);
+	-moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.diamond-active{
+	background-color: #446474;	
+}
+
+.diamond-nav:hover{
+	background-color: #446474;
+	cursor: pointer;
 }
 
 .padding-top-5{

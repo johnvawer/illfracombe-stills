@@ -4,16 +4,14 @@
 
                 <div class="sidebar-nav clearfix">
                     <div class="sidebar-breadcrumb" data-title="gallery" data-placement="right" data-trigger="hover" data-target="#gallery-container">
-                        <div class="arrow-up"></div>
-                        <div class="arrow-down"></div>
+                        <div class="diamond-nav"></div>
+                        <!--div class="arrow-down"></div-->
                     </div>
                     <div class="sidebar-breadcrumb" data-title="about" data-placement="right" data-trigger="hover" data-target="#about-container">
-                        <div class="arrow-up"></div>
-                        <div class="arrow-down"></div>
+                        <div class="diamond-nav"></div>
                     </div>
                     <div class="sidebar-breadcrumb" data-title="contact" data-placement="right" data-trigger="hover">
-                        <div class="arrow-up"></div>
-                        <div class="arrow-down"></div>
+                       <div class="diamond-nav"></div>
                     </div>
                 </div>
             </div>
