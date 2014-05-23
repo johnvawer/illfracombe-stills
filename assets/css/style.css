@@ -19,6 +19,16 @@ h1, h2, h3, h4, h5 {
 	font-family: 'Montserrat';
 }
 
+a{
+	color: inherit;
+	border-bottom: 1px dashed;
+}
+
+a:hover{
+	border-bottom: 1px solid;
+	text-decoration: none;
+}
+
 .container-full-height{
 	border-top: none;
 	position: relative;
@@ -139,6 +149,8 @@ h1, h2, h3, h4, h5 {
 	font-size: 14pt;
 	font-family: 'Merriweather Sans';
 	font-weight: 300;
+	text-align: justify;
+	line-height: 2;
 }
 
 /***************************************/
