@@ -58,7 +58,7 @@
                         <p>
                             My name is Steve and I have lived in Ilfracombe for the past seven years.
                             Although a Hotelier by trade, I had always had a keen interest in photography.
-                            Unfortunately several years ago I was diagnosed with a debilitating illness "Adult Onset Stills Disease"  (<a class="link" href="www.stillsrus.co.uk">www.stillsrus.co.uk</a>)
+                            Unfortunately several years ago I was diagnosed with a debilitating illness "Adult Onset Stills Disease"  (<a class="link" href="http://www.stillsrus.com">www.stillsrus.com</a>)
                             which meant suddenly I was unable to carry on with my work, however as they say "when one ship sails, another comes along" which was quite true,
                             and I found myself with more time available to continue with my love of photography. Having been a keen photographer for over 20 years, this has
                             ultimately become my passion.
