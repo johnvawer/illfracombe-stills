@@ -19,14 +19,22 @@ h1, h2, h3, h4, h5 {
 	font-family: 'Montserrat';
 }
 
-a{
+.link{
 	color: inherit;
 	border-bottom: 1px dashed;
 }
 
-a:hover{
+.link:hover{
 	border-bottom: 1px solid;
 	text-decoration: none;
+}
+
+p{
+	font-size: 14pt;
+	font-family: 'Merriweather Sans';
+	font-weight: 300;
+	text-align: justify;
+	line-height: 2;
 }
 
 .container-full-height{
@@ -131,8 +139,10 @@ a:hover{
 	padding: 1% 0;
 }
 
+#contact-container,
 #gallery-container{
 	background-color: #ECE9E9;
+	color: #3E3D40;
 }
 
 #about-container {
@@ -145,12 +155,12 @@ a:hover{
 }
 
 #about-container p{
-	color: #4E7081;
-	font-size: 14pt;
-	font-family: 'Merriweather Sans';
-	font-weight: 300;
-	text-align: justify;
-	line-height: 2;
+	color: #4E7081;	
+}
+
+#gallery-container .section-title,
+#contact-container .section-title{
+	border-bottom: 1px solid #3E3D40;
 }
 
 /***************************************/
@@ -180,38 +190,69 @@ a:hover{
 	cursor: pointer;
 }
 
-/* Arrow classes to create diamonds */
-.arrow-up{
-	width: 0;
-	height: 0;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-
-	border-bottom: 8px solid #446474;
-}
-
-.arrow-down{
-	width: 0;
-	height: 0;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-
-	border-top: 8px solid #446474;
-}
-
-.arrow-right{
-	width: 0;
-	height: 0;
-	border-top: 8px solid transparent;
-	border-bottom: 8px solid transparent;
-
-	border-left: 8px solid #d9534f;
-}
-
 .tooltip.left .tooltip-arrow{
     border-left-color: #d9534f;
 }
 /***************************************/
+
+.comment-form{
+	padding: 0 20px 0 20px;
+	font-family: 'Merriweather Sans';
+}
+
+/*.comment-form label{
+	margin-top: 2%;
+}*/
+
+.comment-form input{
+	display: block;
+	width: 100%;
+}
+
+.comment-form textarea{
+	width: 100%;
+	display: block;
+	height: 250px;
+	resize:none;
+}
+
+.comment-form input[type=submit]{
+	width: 100px;
+	padding: 10px;
+	margin: auto;
+	margin-top: 5%;
+	font-family: 'Merriweather Sans';
+	background-color: transparent;
+	border: 2px solid #446474;
+	color: #446474;
+}
+
+.comment-form input[type=submit]:hover{
+	background-color: #446474;
+	color: #fff;
+}
+
+.form-group.has-feedback> span.form-control-feedback{
+	display: none;
+}
+
+.form-group.has-error> span.form-control-feedback{
+	display: block;
+}
+
+.form-group.has-feedback> span.help-block{
+	visibility: hidden;
+}
+
+.form-group.has-error> span.help-block{
+	visibility: visible;
+}
+
+.custom-help-block{
+	display: inline-block;
+	margin: 0;
+	float: right;
+}
 
 /* remove hove zoom on thumbnails */
 #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover{

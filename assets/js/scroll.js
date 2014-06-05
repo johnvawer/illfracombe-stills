@@ -36,6 +36,82 @@ $(function() {
 		}, timer);
 	});
 
+	$('#submit_comments').click(function(e){
+		e.preventDefault();
+
+		var params = $('.comment-form').serializeArray();	
+
+		var formIsValid = validateFormElements(params);
+
+		if (formIsValid)
+		{
+			$.ajax({
+			  type: "POST",
+			  url: "/assets/php/comments.php",
+			  data: params  
+			}).done(function(data){
+				
+			});
+		}		
+	});
+
+	function validateFormElements (params) {
+
+		var validation = [];
+
+		for (var i in params)
+		{
+			if (params[i].name == "email")
+			{
+				if (!validateEmail(params[i].value))
+				{
+					validation.push($('#'+params[i].name));
+				}
+			}
+			else
+			{
+				if (!validateText(params[i].value))
+				{
+					validation.push($('#'+params[i].name));	
+				}
+			}			
+		}
+
+		if (validation.length > 0)
+		{
+			highlightErrors(validation);
+			return false;
+		}
+
+		return true;
+	}
+
+	function highlightErrors(elements) {
+
+		for (var i in elements)
+		{	
+			console.log(elements[i].parent());
+			elements[i].parent().addClass('has-error');
+		}
+	}
+
+	function validateEmail (email) {
+
+		var rE = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
+
+		return rE.test(email);
+	}
+
+	function validateText (value) {
+		console.log(value);
+		if (value.length > 0)
+		{
+			return true;
+		}
+
+		return false;
+	}
+
 	function getElementPositions() {
 
 		elArray = [];
@@ -71,12 +147,7 @@ $(function() {
 
 		var val = value;
 
-		$('.sidebar-breadcrumb > .diamond-nav').each(function(i, value){
-			//var toHide = $(this).attr('data-target');
-			//if (toHide !== val.element)
-			//{
-				//$("[data-target='"+ toHide +"']").tooltip('hide');
-			//}
+		$('.sidebar-breadcrumb > .diamond-nav').each(function(i, value){			
 			$(this).removeClass('diamond-active');
 		});
 
@@ -86,15 +157,8 @@ $(function() {
 	function tooltipToggle(value) {
 
 		var element = "[data-target='"+ value.element +"']";
-
-		//if (! $('.sidebar-breadcrumb').next().hasClass('tooltip'))
-		//{
-			$(element+' > .diamond-nav').addClass('diamond-active');
-			/*element.tooltip('show');
-
-			setTimeout(function(){
-				element.tooltip('hide');
-			}, 1000);*/
-		//}
+		$(element+' > .diamond-nav').addClass('diamond-active');			
 	}
+
+
 });

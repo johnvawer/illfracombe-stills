@@ -3,14 +3,14 @@
         <div class="sidebar hidden-xs hidden-sm">
 
                 <div class="sidebar-nav clearfix">
-                    <div class="sidebar-breadcrumb" data-title="gallery" data-placement="right" data-trigger="hover" data-target="#gallery-container">
+                    <div class="sidebar-breadcrumb" data-title="work" data-placement="right" data-trigger="hover" data-target="#gallery-container">
                         <div class="diamond-nav"></div>
                         <!--div class="arrow-down"></div-->
                     </div>
                     <div class="sidebar-breadcrumb" data-title="about" data-placement="right" data-trigger="hover" data-target="#about-container">
                         <div class="diamond-nav"></div>
                     </div>
-                    <div class="sidebar-breadcrumb" data-title="contact" data-placement="right" data-trigger="hover">
+                    <div class="sidebar-breadcrumb" data-title="contact" data-placement="right" data-trigger="hover" data-target="#contact-container">
                        <div class="diamond-nav"></div>
                     </div>
                 </div>
@@ -30,18 +30,20 @@
 
         </div>
 
-        <div id="gallery-container" class="padding-top-5" data-nav="scrollElement">
+        <div id="gallery-container" data-nav="scrollElement">
             <div class="container">
-                <div class="padding-top-10">
-                    <?php the_post(); ?>
-                    <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <!--h1 class="entry-title"><?php the_title(); ?></h1-->
-                        <div class="entry-content">
-                        <?php the_content(); ?>
-                        <?php //wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'your-theme' ) . '&after=</div>') ?>
-                        <?php //edit_post_link( __( 'Edit', 'your-theme' ), '<span class="edit-link">', '</span>' ) ?>
-                        </div><!-- .entry-content -->
-                    </div><!-- #post-<?php the_ID(); ?> -->
+                <div class="row row-additional-padding">
+                    <div class="col-md-12">
+                        <h1 class="section-title">Work</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <?php the_post(); ?>                    
+                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>                            
+                            <div class="entry-content">
+                                <?php the_content(); ?>                        
+                            </div>
+                        </div>
+                    </div>                
                 </div>
             </div>
         </div>
@@ -72,6 +74,56 @@
                             If you have a particular memory of a favourite view or scene in North Devon and wished you had taken that "special" picture prior to leaving,
                             give me a call or drop me an e-mail. I would be more than willing to discuss visiting the site for you and capturing that photograph you long for...
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-full-height" id="contact-container" data-nav="scrollElement">
+            <div class="container">
+                <div class="row row-additional-padding">
+                    <div class="col-md-12">
+                        <h1 class="section-title">Get in Touch</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            Call or E-mail Steve Humphreyson
+                        </p>
+                        <p>
+                            Telephone: 01271 269665 or Mobile 07906 449643
+                        </p>
+                        <p>
+                            Email: steve@ilfracombestills.co.uk   
+                        </p>                       
+                    </div>
+                    <div class="col-md-6">
+                        <form class="comment-form" role="form">
+                            
+                            <div class="form-group has-feedback">
+                                <label class="control-label" for="name">Name</label>
+                                <span class="help-block custom-help-block">Required Field</span>
+                                <input id="name" type="text" name="name" class="form-control">
+                                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                              
+                            </div>
+
+                            <div class="form-group has-feedback">
+                                <label class="control-label" for="email">Email</label> 
+                                <span class="help-block custom-help-block">Invalid Email Address</span>                           
+                                <input id="email" type="email" name="email" class="form-control">
+                                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                
+                            </div>
+                            
+                            <div class="form-group has-feedback">
+                                <label class="control-label" for="comment">Comment</label>
+                                <span class="help-block custom-help-block">Required Field</span>
+                                <textarea id="comment" name="comment" class="form-control"></textarea> 
+                                <span class="glyphicon glyphicon-remove form-control-feedback"></span>                                
+                            </div>
+
+                            <input id="submit_comments" type="submit" value="submit">
+                        </form>
                     </div>
                 </div>
             </div>
