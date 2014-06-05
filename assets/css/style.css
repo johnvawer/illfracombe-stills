@@ -37,6 +37,10 @@ p{
 	line-height: 2;
 }
 
+input[type=submit]:focus{
+	outline: none;
+}
+
 .container-full-height{
 	border-top: none;
 	position: relative;
@@ -112,7 +116,7 @@ p{
 
 .diamond-nav{
 	border: 2px solid #446474;
-	height: 16px;	
+	height: 16px;
 	width: 16px;
 	background-color: transparent;
 	-webkit-transform: rotate(45deg);
@@ -123,7 +127,7 @@ p{
 }
 
 .diamond-active{
-	background-color: #446474;	
+	background-color: #446474;
 }
 
 .diamond-nav:hover{
@@ -155,7 +159,7 @@ p{
 }
 
 #about-container p{
-	color: #4E7081;	
+	color: #4E7081;
 }
 
 #gallery-container .section-title,
@@ -219,8 +223,7 @@ p{
 .comment-form input[type=submit]{
 	width: 100px;
 	padding: 10px;
-	margin: auto;
-	margin-top: 5%;
+	margin: 5% auto;
 	font-family: 'Merriweather Sans';
 	background-color: transparent;
 	border: 2px solid #446474;

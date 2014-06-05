@@ -9,18 +9,18 @@
         elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
         else { bloginfo('name'); wp_title('|'); get_page_number(); }
     ?></title>
- 
-    <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-    
-    <!-- Bootstrap Libs -->
-    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">    
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
-    <script src="../lib/jquery/jquery-1.10.2.min.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/scroll.js"></script>
-    <!-- -->   
+    <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+
+    <!-- Bootstrap Libs -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <script src="lib/jquery/jquery-1.10.2.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <!-- -->
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700' rel='stylesheet' type='text/css'>
@@ -28,7 +28,7 @@
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
     <?php wp_head(); ?>
- 
+
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php printf( __( '%s latest posts', 'hbd-theme' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'hbd-theme' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

@@ -39,7 +39,7 @@ $(function() {
 	$('#submit_comments').click(function(e){
 		e.preventDefault();
 
-		var params = $('.comment-form').serializeArray();	
+		var params = $('.comment-form').serializeArray();
 
 		var formIsValid = validateFormElements(params);
 
@@ -48,16 +48,29 @@ $(function() {
 			$.ajax({
 			  type: "POST",
 			  url: "/assets/php/comments.php",
-			  data: params  
+			  data: params
 			}).done(function(data){
-				
+				var response = JSON.parse(data);
+				if(response.success)
+				{
+					resetForm();
+				}
+				else
+				{
+					alert('Error posting comment');
+				}
 			});
-		}		
+		}
+	});
+
+	$('.comment-form .form-control').blur(function(){
+		validateFormElements([{name: $(this)[0].name, value: $(this)[0] .value}]);
 	});
 
 	function validateFormElements (params) {
 
-		var validation = [];
+		var validation = [],
+			validFields = [];
 
 		for (var i in params)
 		{
@@ -67,14 +80,22 @@ $(function() {
 				{
 					validation.push($('#'+params[i].name));
 				}
+				else
+				{
+					validFields.push($('#'+params[i].name));
+				}
 			}
 			else
 			{
 				if (!validateText(params[i].value))
 				{
-					validation.push($('#'+params[i].name));	
+					validation.push($('#'+params[i].name));
 				}
-			}			
+				else
+				{
+					validFields.push($('#'+params[i].name));
+				}
+			}
 		}
 
 		if (validation.length > 0)
@@ -83,16 +104,33 @@ $(function() {
 			return false;
 		}
 
+		$.each(validFields, function(index, value){
+			markValid(validFields[i]);
+		});
+
 		return true;
 	}
 
 	function highlightErrors(elements) {
 
 		for (var i in elements)
-		{	
-			console.log(elements[i].parent());
+		{
 			elements[i].parent().addClass('has-error');
 		}
+	}
+
+	function markValid(element) {
+		element.parent().removeClass('has-error');
+	}
+
+	function resetForm() {
+		$('.comment-form').trigger('reset');
+
+		$('.comment-form .form-group').each(function(){
+			$(this).removeClass('has-error');
+		});
+
+
 	}
 
 	function validateEmail (email) {
@@ -103,7 +141,7 @@ $(function() {
 	}
 
 	function validateText (value) {
-		console.log(value);
+
 		if (value.length > 0)
 		{
 			return true;
@@ -147,7 +185,7 @@ $(function() {
 
 		var val = value;
 
-		$('.sidebar-breadcrumb > .diamond-nav').each(function(i, value){			
+		$('.sidebar-breadcrumb > .diamond-nav').each(function(i, value){
 			$(this).removeClass('diamond-active');
 		});
 
@@ -157,7 +195,7 @@ $(function() {
 	function tooltipToggle(value) {
 
 		var element = "[data-target='"+ value.element +"']";
-		$(element+' > .diamond-nav').addClass('diamond-active');			
+		$(element+' > .diamond-nav').addClass('diamond-active');
 	}
 
 
