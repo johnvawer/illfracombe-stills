@@ -11,6 +11,7 @@
     ?></title>
 
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" />
 
     <!-- Bootstrap Libs -->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
